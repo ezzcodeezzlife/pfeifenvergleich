@@ -1,0 +1,106 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  meta(name='description' content='')
+  meta(name='author' content='')
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
+  title Pfeifenvergleich
+  // Bootstrap core CSS
+  link(href='vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet')
+  // Additional CSS Files
+  link(rel='stylesheet' href='../assets/css/fontawesome.css')
+  link(rel='stylesheet' href='../assets/css/templatemo-space-dynamic.css')
+  link(rel='stylesheet' href='../assets/css/animated.css')
+  link(rel='stylesheet' href='../assets/css/owl.css')
+  //
+    TemplateMo 562 Space Dynamic
+    https://templatemo.com/tm-562-space-dynamic
+// ***** Preloader Start *****
+#js-preloader.js-preloader
+  .preloader-inner
+    span.dot
+    .dots
+      span
+      span
+      span
+// ***** Preloader End *****
+// ***** Header Area Start *****
+header.header-area.header-sticky.wow.slideInDown(data-wow-duration='0.75s' data-wow-delay='0s')
+  .container
+    .row
+      .col-12
+        nav.main-nav
+          // ***** Logo Start *****
+          a.logo(href='/')
+            h4
+              | pfeifen
+              span vergleich
+          // ***** Logo End *****
+          // ***** Menu Start *****
+          ul.nav
+            li.scroll-to-section
+              a.active(href='/') Suchen
+            li.scroll-to-section
+              a(href='/#about') Warum wir
+            //li.scroll-to-section
+              a(href='#services') Services
+            li.scroll-to-section
+              a(href='/#services') Sortiment
+            //li.scroll-to-section
+              a(href='#blog') Blog
+            li.scroll-to-section
+              a(href='/#contact') Message Us
+            li.scroll-to-section
+              .main-red-button
+                a(href='/#top') Vergleichen
+          a.menu-trigger
+            span Menu
+          // ***** Menu End *****
+// ***** Header Area End *****
+br
+br
+main
+  section(style="margin-top:20px").py-5.text-center.container
+    .row.py-lg-5
+      .col-lg-6.col-md-8.mx-auto
+        h3.fw-light Suche für:
+        p.lead.text-muted
+          | #{searchquery}
+        p
+          //a.btn.btn-primary.my-2(href='#') Neue angebote sehen
+          //a.btn.btn-secondary.my-2(href='/search') Suchfunktion
+
+div(style="width:80%;margin: 0 auto;")
+  each entry in tabledata
+    .card(style="background-color:#03a4ed; color:white;")
+      .card-header
+        | #{entry.category}
+      .card-body
+        //img.card-img-top(src= entry.img style="float:left; width:10vh"  aria-label='Placeholder' ) 
+        h2.card-title #{entry.title}
+        p.card-text(style="color:white;") mehrere Händler
+        a.btn.btn-outline-primary(href=entry._id style="background-color:#fe3f40; color:white;") Vergleichen
+    br
+
+
+//footer.text-muted.py-5
+  .container
+    p.float-end.mb-1
+      a(href='#') 'Yarak'
+    p.mb-1 'Penis!''
+    p.mb-0
+      | Hello 
+      a(href='/') 'You wanna be my friend?'
+      |  'Donuts' 
+      a(href='../getting-started/introduction/ ')  'Delicious'; 
+      | .
+
+// Scripts
+script(src='vendor/jquery/jquery.min.js')
+script(src='vendor/bootstrap/js/bootstrap.bundle.min.js')
+script(src='assets/js/owl-carousel.js')
+script(src='assets/js/animation.js')
+script(src='assets/js/imagesloaded.js')
+script(src='assets/js/templatemo-custom.js')

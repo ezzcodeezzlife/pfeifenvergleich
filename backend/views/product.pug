@@ -1,0 +1,119 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no')
+  meta(name='description' content='')
+  meta(name='author' content='')
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
+  title Pfeifenvergleich
+  // Bootstrap core CSS
+  link(href='vendor/bootstrap/css/bootstrap.min.css' rel='stylesheet')
+  // Additional CSS Files
+  link(rel='stylesheet' href='../assets/css/fontawesome.css')
+  link(rel='stylesheet' href='../assets/css/templatemo-space-dynamic.css')
+  link(rel='stylesheet' href='../assets/css/animated.css')
+  link(rel='stylesheet' href='../assets/css/owl.css')
+  //
+    TemplateMo 562 Space Dynamic
+    https://templatemo.com/tm-562-space-dynamic
+// ***** Preloader Start *****
+#js-preloader.js-preloader
+  .preloader-inner
+    span.dot
+    .dots
+      span
+      span
+      span
+// ***** Preloader End *****
+// ***** Header Area Start *****
+header.header-area.header-sticky.wow.slideInDown(data-wow-duration='0.75s' data-wow-delay='0s')
+  .container
+    .row
+      .col-12
+        nav.main-nav
+          // ***** Logo Start *****
+          a.logo(href='/')
+            h4
+              | Pfeifen
+              span vergleich
+          // ***** Logo End *****
+          // ***** Menu Start *****
+          ul.nav
+            li.scroll-to-section
+              a.active(href='/') Suchen
+            li.scroll-to-section
+              a(href='/#about') Warum wir
+            //li.scroll-to-section
+              a(href='#services') Services
+            li.scroll-to-section
+              a(href='/#services') Sortiment
+            //li.scroll-to-section
+              a(href='#blog') Blog
+            li.scroll-to-section
+              a(href='/#contact') Message Us
+            li.scroll-to-section
+              .main-red-button
+                a(href='/#top') Vergleichen
+          a.menu-trigger
+            span Menu
+          // ***** Menu End *****
+// ***** Header Area End *****
+
+br
+br
+main
+  section.py-5.container
+    .row.py-lg-5
+      .col-lg-6.col-md-8.mx-auto
+        h1(class="caps").fw-light #{tabledata.title}
+        p.lead.text-muted
+          | Shisha
+        //img(src= tabledata.img   aria-label='Placeholder: صورة مصغرة' )
+
+//p #{tabledata.price}
+//p #{tabledata.link}
+
+h3.fw-light  alle Händler und Ausführungen:
+br
+table(class="table")
+    tr
+      th Title
+      th Price (ascending)
+      th Link
+    each entry in new_data
+        tr
+            td(class="caps") #{entry.title}
+            td #{entry.price}
+            td <a href='#{entry.link}' target="_blank">#{entry.link}</a>
+
+h3.fw-light ähnliche Produkte:
+
+.album.py-5.bg-light
+  .container
+    .row.row-cols-1.row-cols-sm-2.row-cols-md-3.g-3
+      each entry in similar
+        .col
+          .card.shadow-sm  
+            //img(src='../public/images/logo.png' alt='Logo' style='width:180px;') 
+            //img.card-img-top(src= entry.img   aria-label='Placeholder' ) 
+            title Placeholder
+            rect(width='100%' height='100%' fill='#55595c')
+            //text(x='50%' y='50%' fill='#eceeef' dy='.3em') #{entry._id}
+            .card-body
+              p(class="caps").card-text
+                | #{entry.title} <br>
+                //| #{entry.price}<br>
+                //| #{entry.link}
+              .d-flex.justify-content-between.align-items-center
+                .btn-group
+                  //a.btn.btn-sm.btn-outline-secondary(type='button' href= entry.link ) buy
+                  a.btn.btn-sm.btn-outline-primary(type='button'  href= '/' + entry._id ) Vergleichen
+                //small.text-muted #{entry.created}
+
+script(src='vendor/jquery/jquery.min.js')
+script(src='vendor/bootstrap/js/bootstrap.bundle.min.js')
+script(src='assets/js/owl-carousel.js')
+script(src='assets/js/animation.js')
+script(src='assets/js/imagesloaded.js')
+script(src='assets/js/templatemo-custom.js')
