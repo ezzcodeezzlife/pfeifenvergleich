@@ -34,10 +34,6 @@ app.get("/", async function (req, res, next) {
   }
 });
 
-app.get("/search", async function (req, res, next) {
-  res.render("dev");
-});
-
 /* Levenshtein distance 
 (amount of string edits to go froam string a to string b for distance)
 https://en.wikipedia.org/wiki/Levenshtein_distance */
